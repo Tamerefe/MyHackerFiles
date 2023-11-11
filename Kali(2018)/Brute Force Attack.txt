@@ -1,0 +1,10 @@
+Facebook 
+
+cd FBBrute/
+python fbbrute.py 
+
+
+Ýnsta 
+
+cd Desktop
+python instabrute.py -u safakeben -w password.txt -p proxy.txt -t 1

