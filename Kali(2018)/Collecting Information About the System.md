@@ -1,15 +1,17 @@
-whois ... -- websitesindeki coðu bilgiyi verir
-ping -- sitenin ip ve ping deðeri
-Robtex Websitesindende yapabilirsin
-WebArchive -- Sitenin Geçmiþini Gösterir
-Pipl -- Kiþiyi Bulur
-Foundstone sitedigger -- Site Acýklarýný Bulur
+```whois``` ... = Gives most of the information on the website <br>
+```ping``` = IP and ping value of the site <br>
+- You can do it on the Robtex Website <br>
 
-theharvester -d mpalmun.com -l 1000 -b all -- sýteyi tarar
+```WebArchive``` = Sitenin geÃ§miÅŸini gÃ¶sterir <br>
+```Pipl``` = Finds the Person <br>
+```Foundstone sitedigger``` = Finds Site Vulnerabilities <br>
+```theharvester -d mpalmun.com -l 1000 -b all``` = Scans the site <br>
+
+```
 ---
 msfconsole
 use auxiliary/gather/search_email_collector 
-show optýons
+show optï¿½ons
 set DOMAIN mpalmun.com
 exploit
 
@@ -17,23 +19,25 @@ exploit
 site.*.mpalmun.com
 site:mpalmun.com inurl:page.php?intPagelD=
 site:mpalmun.com inurl:?id=
-intext:kullanici sifre site:mpalmun.com -- kullanýcý sifre yerine ne yazarsan sitede onu arar
+intext:kullanici sifre site:mpalmun.com = Whatever you type instead of user password is searched on the site.
 allintext:sifre site:mpalmun.com
 inurl:admin site:mpalmun.com
 allinurl:adminpanel , allinurl:"/admin/" , allinurl:wp-admin
 allinurl:adminpanel site:maplmun.com
 allinurl:"/admin/" site:mpalmun.com
 allinurl:wp-admin site:mpalmun.com 
-filetype:xls "þifre" site:mpalmun.com
+filetype:xls "ï¿½ifre" site:mpalmun.com
 intitle:index.of site:mpalmun.com
 intitle:index.of ws_ftp log site:mpalmun.com
 intitle:index.of inurl:"/admin/" site:mpalmun.com
 "Powered by phpBB" inurl:"index.php?s" OR inurl:"index.php?style"
+```
 
-Aktif Bilgi Toplama
+### Active Information Collection
 
+```
 tcptraceroute 23.236.62.147
-traceroute 147.62.236.23.bc.googleusercontent.com / Windows Ýçin tracert mpalmun.com
+traceroute 147.62.236.23.bc.googleusercontent.com / Windows ï¿½ï¿½in tracert mpalmun.com
 
 wafw00f https://www.mpalmun.com
 
@@ -62,30 +66,39 @@ use auxiliary/scanner/snmp/snmp_enum
 show options
 set RHOSTS mpalmun.com
 exploit
+```
 
-Dmitry
+### Dmitry
 
+```
 dmitry
-dmitry -iwnsepf mpalmun.com
-dmitry -iwnsepf mpalmun.com -o /root/bilgi.txt
+dmitry -iwnsepf /\.com
+dmitry -iwnsepf /\.com -o /root/info.txt
+```
 
-IP Vpn mi Deðil mi Öðrenme
+### Learning IP VPN or Not
 
+```
 ike-scan
 ike-scan 23.236.62.147
+```
 
-Birinin Hangi Portu Kullandýðýný Naptýðýný Bulmak
+### Finding Out Which Port Someone Is Using
+
+```
 p0f
 p0f -i eth0
+```
 
-Site Zaafiyet Analizi
+### Site Vulnerability Analysis
 
+```
 recon-ng
 show modules
 use recon/domains-vulnerabilities/punkspider
 show options
-set SOURCE mpalmun.com
+set SOURCE //.com
 run
-
+```
 
 
