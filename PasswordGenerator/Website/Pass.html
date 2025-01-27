@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <link rel="stylesheet" href="Word.css">
+    <title>Password Generator</title>
+</head>
+<body>
+    
+    <h1>You're welcome Password Generator</h1>
+
+    <p>Would you like a word of your choice in your password ?<input type="text" id="charaters" placeholder="Dolliet"></p>
+    <p>How many characters would you like in your password ? <input type="text" id="digit" placeholder="15"></p>
+    <p style="color: crimson; font-size: 12px;">Please don't let the word be greater than the character !!</p>
+    <br>
+    <div id="progressbar">
+        <div id="progressbarDiv"></div>
+    </div> 
+    
+    <p id="progressbarP">The security value of your password </p><br>
+
+    <div>
+    <button id="button" style="margin-right: 2.75rem; ">Create</button> 
+        <div class="tooltip"><button style="margin-bottom: 0px;" onclick="copyToClipboard('out')">Copy The Clipboard <i class="far fa-clipboard"></i></button>
+        <span id="tooltiptext">Empty Couldn't copy </span>
+        </div>
+    <button id="myBtn" style="margin-left: 1rem;"><i class="fas fa-info"></i></button>  
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>What is Strong Password Generator?</h2>
+        </div>
+        <div class="modal-body">
+        <p>Strong password generator is an easy-to-use online password generator and automatic password generator that allows you to create passwords that are difficult to crack, and shows how strong the passwords you create are. Also, if you are wondering how secure my password is, you can find out how secure your password is with strong password generator.</p>
+        </div>
+    </div>
+
+    </div>
+    
+    <p id="out"></p>
+    
+
+     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <a style="font-size: 8px;" href="https://www.vecteezy.com/free-vector/web">Web Vectors by Vecteezy</a>
+
+    <script src="Generate.js" type="text/Javascript"></script>
+</body>
+</html>
